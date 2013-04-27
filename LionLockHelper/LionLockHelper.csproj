@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E909351-97CA-40CA-A4E2-84AC9F43815B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LionLockHelper</RootNamespace>
+    <AssemblyName>LionLockHelper</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.SHDocVw">
+      <HintPath>..\packages\WatiN.2.1.0\lib\net40\Interop.SHDocVw.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\ServiceStack.Text.3.9.43\lib\net35\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WatiN.Core">
+      <HintPath>..\packages\WatiN.2.1.0\lib\net40\WatiN.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dto\LionLockBankAcccount.cs" />
+    <Compile Include="Dto\LionLockCreditCard.cs" />
+    <Compile Include="Dto\LionLockEmployeeInfo.cs" />
+    <Compile Include="Dto\LionLockLicenseKey.cs" />
+    <Compile Include="Dto\LionLockPassword.cs" />
+    <Compile Include="Dto\LionLockPinCode.cs" />
+    <Compile Include="Dto\LionLockWebsitePassword.cs" />
+    <Compile Include="Dto\LionLockWirelessPassword.cs" />
+    <Compile Include="Dto\SecretServerProductLicenseKey.cs" />
+    <Compile Include="Dto\SecretServerActiveDirectory.cs" />
+    <Compile Include="Dto\SecretServerBankAccount.cs" />
+    <Compile Include="Dto\SecretServerCertificate.cs" />
+    <Compile Include="Dto\SecretServerCreditCard.cs" />
+    <Compile Include="Dto\SecretServerEmailAccount.cs" />
+    <Compile Include="Dto\SecretServerKeyFile.cs" />
+    <Compile Include="Dto\SecretServerLibraryCard.cs" />
+    <Compile Include="Dto\SecretServerLicenseKey.cs" />
+    <Compile Include="Dto\SecretServerPassword.cs" />
+    <Compile Include="Dto\SecretServerPin.cs" />
+    <Compile Include="Dto\SecretServerRemoteDesktopAccount.cs" />
+    <Compile Include="Dto\SecretServerRewardsCard.cs" />
+    <Compile Include="Dto\SecretServerSocialSecurityNumber.cs" />
+    <Compile Include="Dto\SecretServerWebPassword.cs" />
+    <Compile Include="Dto\SecretServerWifiKey.cs" />
+    <Compile Include="Dto\SecretServerWindowsAccount.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecretConverter.cs" />
+    <Compile Include="Service References\SecretServerOnline\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.AddSecretResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.AuthenticateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.CreateFolderResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.FileDownloadResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.GeneratePasswordResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.GetCheckOutStatusResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.GetFavoritesResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.GetFolderResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.GetFoldersResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.GetSecretAuditResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.GetSecretResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.GetSecretTemplateFieldsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.GetSecretTemplatesResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.GetWebPasswordResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.SearchFolderResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.SearchSecretsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.SetCheckOutEnabledResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.TokenIsValidResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.UploadFileAttachmentByItemIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.UploadFileAttachmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.VersionGetResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\LionLockHelper.SecretServerOnline.WebServiceResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecretServerOnline\sswebservice.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SecretServerOnline\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecretServerOnline\sswebservice.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecretServerOnline\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecretServerOnline\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecretServerOnline\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
